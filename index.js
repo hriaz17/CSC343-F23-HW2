@@ -277,4 +277,6 @@ loadAndRenderGraph(fileName);
 // compute and display simple statistics on the graph
 displayGraphStatistics(graphObj);
 
+console.log("changed");
+
 
