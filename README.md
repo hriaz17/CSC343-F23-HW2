@@ -1,5 +1,4 @@
 # CSC-343-HW2
-A template repository for assignment 2 from CSC 343: Human Computer Interaction taught by Stephen Kobourov &amp; Haris Riaz at the University of Arizona, Fall 2023
 
 ## Prerequisites
 
