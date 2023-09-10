@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Graph Visualization Tool</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center; /* Center aligns all inline or inline-block content of the body */
+            background-color: #f7f7f7; /* Background color for better visibility */
+        }
+
+        .title-container {
+            width: 100%;
+            padding: 5px 0; /* Vertical padding */
+            background-color: #333; /* Dark background color for the title container */
+        }
+
+        .title-container h2 {
+            margin: 0; /* Removes default margins */
+            color: #fff; /* White color for the title text */
+            font-size: 2em; /* Font size */
+        }
+
+        #graphviz {
+            width: 100%;
+            height: 80vh; /* 80% of the viewport height */
+            border-top: 1px solid #eee; /* A light border at the top */
+        }
+
+    </style>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+</head>
+<body>
+    <div class="title-container"><h2>IMDB Movies Graph</h2></div> 
+    <div id="graphviz"></div>
+    <button id="computeStats">Compute statistics</button>
+    <div id="stats">
+        <p>Average Node Degree: <span id="avgDegree"></span></p>
+        <p>Number of Connected Components: <span id="numComponents"></span></p>
+        <p>Graph Density: <span id="graphDensity"></span></p>
+    </div>
+    <script type="module" src="index.js"></script>
+</body>
+</html>
