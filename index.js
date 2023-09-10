@@ -1,6 +1,10 @@
 // import the GraphClass definiton from GraphClass.js
 import GraphClass from './GraphClass.js'; 
 
+/*
+    Given some JSON data representing a graph, render it with D3
+*/
+// dummy commit
 function renderGraph(graphData) {
     d3.select("#graphviz svg").remove();  
     let isNodeClicked = false;
@@ -196,8 +200,11 @@ function renderGraph(graphData) {
     
 }
 
-// Function to fetch the JSON data and render the graph
-async function loadAndRenderGraph(fileName) {
+/*
+    Function to fetch the JSON data from output_graph.json & call the renderGraph() method
+    to visualize this data
+*/
+function loadAndRenderGraph(fileName) {
     fetch(fileName)
         .then(response => response.json())
         .then(data => {
@@ -214,12 +221,16 @@ async function loadAndRenderGraph(fileName) {
 
 }
 
-function displayGraphStatistics() {
+/*
+    A method to compute simple statistics (Programming part Subproblem 6)
+    on updated graph data
+*/
+function displayGraphStatistics(graphObj) {
     document.getElementById('computeStats').addEventListener('click', function() {
         document.getElementById('avgDegree').innerText = graphObj.computeAverageNodeDegree().toFixed(2);
         document.getElementById('numComponents').innerText = graphObj.computeConnectedComponents();
         document.getElementById('graphDensity').innerText = graphObj.computeGraphDensity().toFixed(4);
-        //document.getElementById('graphDiameter').innerText = graphObj.computeDiameter();
+        
         // Histogram for node degrees
         const nodeDegrees = Object.values(graphObj.graph.nodeDegrees);
         const margin = {top: 10, right: 30, bottom: 40, left: 40};
@@ -268,7 +279,7 @@ function displayGraphStatistics() {
 // instantiate an object of GraphClass
 let graphObj = new GraphClass();
 
-// your saved graph from Homework 1
+// your saved graph file from Homework 1
 let fileName="output_graph.json"
 
 // render the graph in the browser
