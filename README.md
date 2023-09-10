@@ -58,6 +58,11 @@ This README will guide you through setting up the project and getting the graph 
     and render the computed statistics on the canvas of your graph visualization (**hint**: A possible approach here would be to call these functions inside the `displayGraphStatistics(graphObj)`
     method in `index.js`).
 
+   Also, you **should not edit** these files:
+    - `./tests.js`
+    - `./server.js`
+    - `.github/workflows/run-tests-on-pull.yml`
+
 5. **Test your code**:
    
     Tests have been provided for you in the `./tests.js` file.
