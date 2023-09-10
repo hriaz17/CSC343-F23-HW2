@@ -32,7 +32,6 @@ describe('GraphClass', function() {
         it('should compute correct average node degree for the dummy graph', function() {
             let graphInstance = new GraphClass();
             graphInstance.graph = dummyGraphData;
-            console.log(graphInstance.computeAverageNodeDegree())
             // sum of node degrees == 6 / number of nodes == 5 => 1.2
             assert.equal(graphInstance.computeAverageNodeDegree(), 1.2);
         });
@@ -42,7 +41,6 @@ describe('GraphClass', function() {
         it('should compute correct number of connected components for the dummy graph', function() {
             let graphInstance = new GraphClass();
             graphInstance.graph = dummyGraphData;
-            console.log(graphInstance.computeConnectedComponents())
             // As node 'tt0069699' is not connected to any other node, so there are 2 components
             assert.equal(graphInstance.computeConnectedComponents(), 2); 
         });
@@ -52,7 +50,6 @@ describe('GraphClass', function() {
         it('should compute correct graph density for the dummy graph', function() {
             let graphInstance = new GraphClass();
             graphInstance.graph = dummyGraphData;
-            console.log(graphInstance.computeGraphDensity())
             // Using closeTo because of potential floating point inaccuracies
             assert.closeTo(graphInstance.computeGraphDensity(), 0.3, 0.1); 
         });
