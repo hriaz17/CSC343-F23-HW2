@@ -6,7 +6,7 @@ export default class GraphClass {
         nodeDegrees: {}
       };
     }
-    // a) Compute average node degree
+    // Problem 6a) Compute average node degree
     computeAverageNodeDegree() {
         let totalDegree = 0;
         for (const node in this.graph.nodeDegrees) {
@@ -15,7 +15,7 @@ export default class GraphClass {
         return totalDegree / this.graph.nodes.length;
     }
 
-    // b) Number of connected components
+    // Problem 6b) Number of connected components
     computeConnectedComponents() {
         let visitedNodes = new Set();
         let components = 0;
@@ -47,7 +47,7 @@ export default class GraphClass {
         return components;
     }
 
-    // c) Compute graph density
+    // Problem 6c) Compute graph density
     computeGraphDensity() {
         const V = this.graph.nodes.length;
         const E = this.graph.edges.length;
